@@ -11,19 +11,10 @@ const App = () => {
         dispatch(fetchNames());
     },[]);
 return (
-    <div>
-        {loading ? (
-            <p>Loading...</p>
-        ) :
-            (
-                <>
-                    {error ? <p>{error}</p> :
-                        (
-                            <Autocomplete names={names}/>
-                        )}
-                </>
-            )}
-    </div>
+    <>
+        {loading && <p>Loading...</p>}
+        {error ? <p>{error}</p> : <Autocomplete names={names}/>}
+    </>
   );
 };
 

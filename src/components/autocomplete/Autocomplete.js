@@ -57,7 +57,8 @@ const Autocomplete = ({names}) => {
 
             {namesArr.length > 0 && (
                 <div>
-                    {namesArr.map((el,i) => <button className="btn" key={i} onClick={() => handleClick(el)}>{el}</button>)}
+                    {/*in this simple example, my unique key will be name*/}
+                    {namesArr.map(el => <button className="btn" key={el} onClick={() => handleClick(el)}>{el}</button>)}
                 </div>
             )}
         </div>
